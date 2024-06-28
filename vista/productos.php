@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response_data = json_decode($response, true);
 
     // Manejar la respuesta de la API
-    if (isset($response_data['message']) && $response_data['message'] == 'Product was created.') {
+    if (isset($response_data['message']) && $response_data['message'] == 'Item was created.') {
         $_SESSION['create_success'] = "Producto creado con éxito.";
     } else {
         $_SESSION['create_error'] = "Error al crear el producto.";
