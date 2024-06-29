@@ -5,8 +5,8 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-include_once '../Modelo/Database.php';
-include_once '../Controlador/Items.php';
+include_once '../../Modelo/Database.php';
+include_once '../../Controlador/Items.php';
 
 $database = new Database();
 $db = $database->getConnection();
@@ -14,6 +14,8 @@ $db = $database->getConnection();
 $items = new Items($db);
 
 $data = json_decode(file_get_contents("php://input"));
+
+var_dump($data->id);
 
 if (!empty($data->id)) {
     $id = $data->id;
