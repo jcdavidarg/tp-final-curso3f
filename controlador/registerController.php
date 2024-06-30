@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once '../../Modelo/Database.php';
-include_once '../../Modelo/User.php';
+include_once '../modelo/Database.php';
+include_once '../modelo/User.php';
 
 $database = new Database();
 $db = $database->getConnection();
@@ -18,7 +18,7 @@ if ($_POST) {
     // Validar los campos obligatorios
     if (empty($user_email) || empty($username) || empty($password)) {
         $_SESSION['register_error'] = 'Todos los campos son obligatorios';
-        header("Location: ../../vista/auth/register.php");
+        header("Location: ../vista/register.php");
         exit();
     }
 
@@ -33,11 +33,11 @@ if ($_POST) {
     // Guardar el usuario en la base de datos
     if ($user->register()) {
         $_SESSION['register_success'] = 'Usuario creado correctamente';
-        header("Location:../../vista/auth/register.php");
+        header("Location: ../vista/register.php");
         exit();
     } else {
         $_SESSION['register_error'] = 'Error al crear el usuario';
-        header("Location:../../vista/auth/register.php");
+        header("Location: ../vista/register.php");
         exit();
     }
 }

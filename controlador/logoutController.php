@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once '../../Modelo/Database.php';
-include_once '../../Modelo/User.php';
+include_once '../modelo/Database.php';
+include_once '../modelo/User.php';
 
 // Verifica si el usuario está logueado
 if (isset($_SESSION['user_id'])) {
@@ -21,5 +21,5 @@ session_unset();
 session_destroy();
 
 // Redirigir al login
-header("Location: ../../vista/auth/login.php");
+header("Location: ../vista/login.php");
 exit();

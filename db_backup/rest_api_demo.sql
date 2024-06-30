@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-06-2024 a las 07:20:16
+-- Tiempo de generación: 30-06-2024 a las 05:30:23
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -42,8 +42,8 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `description`, `price`, `category_id`, `created`, `modified`) VALUES
-(1, 'LG P880 4X HD', 'My first awesome phone!', 336, 3, '2014-06-01 01:12:26', '2014-05-31 17:42:26'),
-(2, 'Google Nexus 4', 'The most awesome phone of 2013!', 299, 2, '2014-06-01 01:12:26', '2014-05-31 17:42:26'),
+(1, 'LG P880 4X HD', 'My first awesome!', 336, 3, '2014-06-01 01:12:26', '2014-05-31 17:42:26'),
+(2, 'Google Nexus 4', 'The most awesome phone of 2015!', 299, 2, '2014-06-01 01:12:26', '2014-05-31 17:42:26'),
 (3, 'Samsung Galaxy S4', 'How about no?', 600, 3, '2014-06-01 01:12:26', '2014-05-31 17:42:26'),
 (6, 'Bench Shirt', 'The best shirt!', 29, 1, '2014-06-01 01:12:26', '2014-05-31 02:42:21'),
 (7, 'Lenovo Laptop', 'My business partner.', 399, 2, '2014-06-01 01:13:45', '2014-05-31 02:43:39'),
@@ -54,14 +54,16 @@ INSERT INTO `items` (`id`, `name`, `description`, `price`, `category_id`, `creat
 (12, 'Abercrombie Lake Arnold Shirt', 'Perfect as gift!', 60, 1, '2014-06-06 17:12:21', '2014-06-05 18:42:11'),
 (13, 'Abercrombie Allen Brook Shirt', 'Cool red shirt!', 70, 1, '2014-06-06 17:12:59', '2014-06-05 18:42:49'),
 (26, 'Another product', 'Awesome product!', 555, 2, '2014-11-22 19:07:34', '2014-11-21 21:37:34'),
-(28, 'Wallet', 'You can absolutely use this one!', 799, 6, '2014-12-04 21:12:03', '2014-12-03 23:42:03'),
+(74, 'Hard Wallet', 'Billetera de criptomonedas segura.', 700, 2, '2024-06-30 00:28:21', '2024-06-30 00:28:21'),
 (31, 'Amanda Waller Shirt', 'New awesome shirt!', 333, 1, '2014-12-13 00:52:54', '2014-12-12 03:22:54'),
 (42, 'Nike Shoes for Men', 'Nike Shoes', 12999, 3, '2015-12-12 06:47:08', '2015-12-12 07:17:08'),
 (48, 'Bristol Shoes', 'Awesome shoes.', 999, 5, '2016-01-08 06:36:37', '2016-01-08 07:06:37'),
 (60, 'Rolex Watch', 'Luxury watch.', 25000, 1, '2016-01-11 15:46:02', '2016-01-11 16:16:02'),
-(61, 'laptop Mac', 'laptop 16gb', 1200, 2, '2024-06-25 00:25:04', '2024-06-25 00:25:04'),
-(64, 'Nvidia RTX 4050', 'GPU with 16gb', 1300, 4, '2024-06-25 00:43:38', '2024-06-25 00:43:38'),
-(63, 'Iphone 13', 'Latest Iphone on market !!', 2000, 3, '2024-06-25 00:33:07', '2024-06-25 00:33:07');
+(64, 'Nvidia RTX 4050', 'GPU with 16gb!\r\nLast Series', 1300, 4, '2024-06-25 00:43:38', '2024-06-25 00:43:38'),
+(63, 'Iphone 13', 'Latest Iphone on the world market!!', 2000, 3, '2024-06-25 00:33:07', '2024-06-25 00:33:07'),
+(72, 'TV LED LG', 'TV LED LG Modelo 301020-KG!', 500, 4, '2024-06-29 04:46:42', '2024-06-29 04:46:42'),
+(71, 'Samsung S22', 'El mejor celular del año 2022', 1000, 4, '2024-06-29 04:27:56', '2024-06-29 04:27:56'),
+(73, 'Nintengo Switch', 'Consola de juegos portatil.', 500, 3, '2024-06-30 00:27:05', '2024-06-30 00:27:05');
 
 -- --------------------------------------------------------
 
@@ -84,8 +86,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `username`, `password`, `user_email`, `user_status`) VALUES
 (1, 'jim', '$2y$10$6TOwcfgSjHJCcKhIgYox5eOazNGulYdmwKXjlP3Ic.u67CpVnh01O', 'jim@as.com', 0),
 (6, 'lii', '$2y$10$VZ0r02vt68abeslJ59dL9O5vBxHK/RerAsbLswkwmPSfM40zX9L9m', 'light@li.com', 0),
-(8, 'david', '$2y$10$SxCdcUcg3Phkm4pQf/Ml1uKlsfgSWKNz/8rnCQNZl3xSEOasroFEe', 'jcdavidarg@gmail.com', 0),
-(9, 'luke', '$2y$10$jclo8kWcUxdXwA/SZHccDeoCYn2O1Xd0cOl1WGFf8XbyiQe.empce', 'luke@sky.com', 0);
+(10, 'roma', '$2y$10$hSahQtwuuAAZsadbfXKmi.7nTEWxv1TijFHbMj6Y5nve033rzj7XO', 'roma@gmaill.com', 0),
+(11, 'david', '$2y$10$sYqFByrX3HkkFCYC8TVmt.0ub8TT8lBw3YyYN3iYjEGVsuLUOWnuu', 'mail@mail.com', 0);
 
 --
 -- Índices para tablas volcadas
@@ -111,13 +113,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

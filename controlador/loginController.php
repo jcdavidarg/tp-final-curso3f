@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once '../../Modelo/Database.php';
-include_once '../../Modelo/User.php';
+include_once '../modelo/Database.php';
+include_once '../modelo/User.php';
 
 $database = new Database();
 $db = $database->getConnection();
@@ -27,16 +27,16 @@ if ($_POST) {
 
             http_response_code(200);
             echo json_encode(array("message" => "Login successful."));
-            header("Location: ../../index.php");
+            header("Location: ../vista/index.php");
             exit();
         } else {
             $_SESSION['login_error'] = 'Usuario y contraseña incorrectas';
-            header("Location: ../../vista/auth/login.php");
+            header("Location: ../vista/login.php");
             exit();
         }
     } else {
         $_SESSION['login_error'] = 'Usuario no encontrado';
-        header("Location: ../../vista/auth/login.php");
+        header("Location: ../vista/login.php");
         exit();
     }
 }
