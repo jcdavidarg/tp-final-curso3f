@@ -27,7 +27,7 @@ if ($_POST) {
 
             http_response_code(200);
             echo json_encode(array("message" => "Login successful."));
-            header("Location: ../vista/index.php");
+            header("Location: ../index.php");
             exit();
         } else {
             $_SESSION['login_error'] = 'Usuario y contraseña incorrectas';

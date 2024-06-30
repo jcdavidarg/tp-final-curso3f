@@ -169,7 +169,7 @@ if (isset($_GET['borrar'])) {
             <div class="col-md">
                 <ul class="nav nav-pills justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="./index.php">Inicio</a>
+                        <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo ($current_page == 'productos.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="./productos.php">Productos</a>

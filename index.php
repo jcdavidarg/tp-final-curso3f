@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_id"])) {
-    header("location:./login.php");
+    header("location:./vista/login.php");
 }
 
 $current_page = basename($_SERVER['PHP_SELF']);
@@ -30,7 +30,7 @@ if (isset($data['items'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
 </head>
 
 <body>
@@ -43,10 +43,10 @@ if (isset($data['items'])) {
                         <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="./index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo ($current_page == 'productos.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="./productos.php">Productos</a>
+                        <a class="nav-link <?php echo ($current_page == 'productos.php') ? 'active bg-success text-white' : 'text-success'; ?>" href="./vista/productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="../controlador/logoutController.php">Cerrar Sesión</a>
+                        <a class="nav-link text-success" href="./controlador/logoutController.php">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +73,7 @@ if (isset($data['items'])) {
                     <div class="col">
                         <div class="card h-100">
                             <div class="image-container">
-                                <img src="../public/images/product_placeholder.png" class="card-img-top" alt="imagen de referencia de <?php echo $producto['name']; ?>">
+                                <img src="./public/images/product_placeholder.png" class="card-img-top" alt="imagen de referencia de <?php echo $producto['name']; ?>">
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><?php echo $producto['name']; ?></h5>
